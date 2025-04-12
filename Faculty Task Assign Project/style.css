@@ -1,0 +1,291 @@
+/* Color Variables */
+:root {
+    --primary-color: #003366;    /* Navy Blue - Primary Color */
+    --secondary-color: #FF6600;  /* Orange - Secondary Color */
+    --accent-color: #FFB366;     /* Light Orange - Accent Color */
+    --dark-blue: #002347;        /* Darker Blue for Hover States */
+    --light-blue: #E6F3FF;       /* Light Blue for Backgrounds */
+    --white: #FFFFFF;
+    --gray-100: #F8F9FA;
+    --gray-200: #E9ECEF;
+    --gray-300: #DEE2E6;
+    --gray-400: #CED4DA;
+    --gray-500: #ADB5BD;
+    --gray-600: #6C757D;
+    --gray-700: #495057;
+    --gray-800: #343A40;
+    --gray-900: #212529;
+}
+
+/* Common Theme Styles */
+body {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--dark-blue) 100%);
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Header Styles */
+.header-section {
+    background: var(--white);
+    padding: 15px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    width: 100%;
+    border-bottom: 3px solid var(--secondary-color);
+}
+
+.college-logo {
+    height: 80px;
+    margin-right: 20px;
+}
+
+.college-name {
+    color: var(--primary-color);
+}
+
+.college-name h1 {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0;
+    line-height: 1.2;
+    color: var(--primary-color);
+}
+
+.college-name p {
+    font-size: 16px;
+    margin: 0;
+    color: var(--gray-700);
+}
+
+/* Login Form Styles */
+.login-form {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 25px rgba(0,0,0,0.15);
+    width: 100%;
+    max-width: 400px;
+    border-top: 4px solid var(--secondary-color);
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 120px);
+    padding: 20px;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    min-height: calc(100vh - 120px);
+    background: var(--primary-color);
+    color: var(--white);
+    border-right: 3px solid var(--secondary-color);
+}
+
+.sidebar a {
+    color: var(--white);
+    text-decoration: none;
+    padding: 12px 20px;
+    display: block;
+    transition: all 0.3s ease;
+    border-left: 3px solid transparent;
+}
+
+.sidebar a:hover {
+    background: var(--dark-blue);
+    border-left: 3px solid var(--secondary-color);
+    padding-left: 25px;
+}
+
+.sidebar i {
+    width: 25px;
+    text-align: center;
+    margin-right: 10px;
+    color: var(--accent-color);
+}
+
+/* Card Styles */
+.stats-card {
+    background: var(--white);
+    border-radius: 10px;
+    padding: 25px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    border-left: 4px solid var(--secondary-color);
+}
+
+.stats-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+.task-card {
+    background: var(--white);
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.task-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+/* Button Styles */
+.btn-primary {
+    background: var(--primary-color);
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: var(--secondary-color);
+    transform: translateY(-1px);
+    box-shadow: 0 5px 15px rgba(255,102,0,0.3);
+}
+
+/* Form Styles */
+.form-control {
+    border-radius: 5px;
+    padding: 12px;
+    border: 2px solid var(--gray-300);
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border-color: var(--secondary-color);
+}
+
+.input-group-text {
+    background: var(--gray-100);
+    border: 2px solid var(--gray-300);
+    border-right: none;
+    color: var(--primary-color);
+}
+
+/* Main Content Area */
+.main-content {
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+}
+
+/* Table Styles */
+.table {
+    background: var(--white);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+.table thead th {
+    background: var(--primary-color);
+    color: var(--white);
+    border: none;
+    padding: 15px;
+}
+
+.table tbody tr:hover {
+    background-color: var(--light-blue);
+}
+
+/* Priority Indicators */
+.priority-high { border-left: 4px solid #dc3545; }
+.priority-medium { border-left: 4px solid var(--secondary-color); }
+.priority-low { border-left: 4px solid #28a745; }
+
+/* Status Colors */
+.status-pending { color: var(--secondary-color); }
+.status-in-progress { color: var(--primary-color); }
+.status-completed { color: #28a745; }
+.status-overdue { color: #dc3545; }
+
+/* Logo Section */
+.logo {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.logo i {
+    font-size: 48px;
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+}
+
+.logo h2 {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+/* Links */
+.register-link a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.register-link a:hover {
+    color: var(--primary-color);
+}
+
+/* Alert/Feedback Messages */
+.invalid-feedback {
+    color: #dc3545;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.alert {
+    border-radius: 8px;
+    border: none;
+    padding: 15px 20px;
+}
+
+.alert-success {
+    background-color: #d4edda;
+    border-left: 4px solid #28a745;
+    color: #155724;
+}
+
+.alert-danger {
+    background-color: #f8d7da;
+    border-left: 4px solid #dc3545;
+    color: #721c24;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .college-name h1 {
+        font-size: 20px;
+    }
+    .college-name p {
+        font-size: 14px;
+    }
+    .college-logo {
+        height: 60px;
+    }
+    .sidebar {
+        min-height: auto;
+        border-right: none;
+        border-bottom: 3px solid var(--secondary-color);
+    }
+    .main-content {
+        padding: 15px;
+    }
+    .stats-card {
+        padding: 15px;
+    }
+} 
